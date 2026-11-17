@@ -1,0 +1,3 @@
+export default function ClassSwitch({ value, onChange }) {
+  return <div className="inline-flex rounded-xl bg-slate-100 p-1 dark:bg-slate-800">{["XI","XII"].map(g => <button key={g} onClick={() => onChange(g)} className={`rounded-lg px-5 py-2 text-sm font-semibold ${value === g ? "bg-white text-blue-700 shadow-sm dark:bg-slate-700 dark:text-blue-300" : "text-slate-500 dark:text-slate-400"}`}>{g}-B</button>)}</div>;
+}

@@ -1,0 +1,4 @@
+export default function StatCard({ label, value, note, icon: Icon, tone = "blue" }) {
+  const tones = { blue: "bg-blue-50 text-blue-700 dark:bg-blue-950/50 dark:text-blue-300", green: "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300", red: "bg-rose-50 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300", amber: "bg-amber-50 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300" };
+  return <div className="card"><div className="flex items-center justify-between"><p className="text-sm text-slate-500 dark:text-slate-400">{label}</p>{Icon && <span className={`rounded-xl p-2 ${tones[tone]}`}><Icon size={18}/></span>}</div><p className="mt-3 text-2xl font-bold tabular-nums">{value}</p>{note && <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{note}</p>}</div>;
+}
